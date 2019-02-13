@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="BookTicket" type="BookTicketType"/>
+	<xs:complexType name="BookTicketType">
+		<xs:sequence>
+			<xs:element name="PassengerInfo" type="PassengerInfoType"/>
+			<xs:element name="JourneyInfo" type="JourneyInfoType"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="PassengerInfoType">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string"/>
+			<xs:element name="email" type="xs:string"/>
+			<xs:element name="phNumber" type="xs:long"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="JourneyInfoType">
+		<xs:sequence>
+			<xs:element name="from" type="xs:string"/>
+			<xs:element name="to" type="xs:string"/>
+			<xs:element name="trainName" type="xs:string"/>
+			<xs:element name="journeyDate" type="xs:date"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
